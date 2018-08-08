@@ -183,8 +183,10 @@ namespace LSC.Api.Controllers
                     new SimpleMessage(((int)code).ToString(), detail)
                 );
         }
-        
+
+#pragma warning disable CS0693 // O parâmetro de tipo tem o mesmo nome que o parâmetro de tipo do tipo externo
         protected void VerificaRequestNula<TTransport>(TTransport request)
+#pragma warning restore CS0693 // O parâmetro de tipo tem o mesmo nome que o parâmetro de tipo do tipo externo
         {
             // Validando instância da request
             if (request == null)
